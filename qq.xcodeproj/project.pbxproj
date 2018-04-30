@@ -13,6 +13,17 @@
 		0F97EF152096E1DD0090096B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F97EF132096E1DD0090096B /* Main.storyboard */; };
 		0F97EF212096E1DD0090096B /* qqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF202096E1DD0090096B /* qqTests.swift */; };
 		0F97EF2C2096E1DE0090096B /* qqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF2B2096E1DE0090096B /* qqUITests.swift */; };
+		0F97EF3A2096E2160090096B /* LoginWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF392096E2160090096B /* LoginWindowController.swift */; };
+		0F97EF3C2096F1FD0090096B /* LoginImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF3B2096F1FD0090096B /* LoginImageButton.swift */; };
+		0F97EF4C209713F60090096B /* LoginAccountTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF4B209713F60090096B /* LoginAccountTextField.swift */; };
+		0F97EF4E209715C30090096B /* LoginPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF4D209715C30090096B /* LoginPasswordTextField.swift */; };
+		0F97EF502097259E0090096B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF4F2097259E0090096B /* Constants.swift */; };
+		0F97EF5920972DA60090096B /* i18n.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F97EF5B20972DA60090096B /* i18n.strings */; };
+		0F97EF5F20973D5B0090096B /* IconArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF5E20973D5B0090096B /* IconArrowButton.swift */; };
+		0F97EF6120973F910090096B /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF6020973F910090096B /* ImageButton.swift */; };
+		0F97EF6320975B6C0090096B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF6220975B6C0090096B /* OptionsViewController.swift */; };
+		0F97EF652097A1930090096B /* settingViewSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F97EF642097A1920090096B /* settingViewSound.wav */; };
+		0F97EF692097A3530090096B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F97EF682097A3530090096B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +57,20 @@
 		0F97EF272096E1DD0090096B /* qqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F97EF2B2096E1DE0090096B /* qqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qqUITests.swift; sourceTree = "<group>"; };
 		0F97EF2D2096E1DE0090096B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F97EF392096E2160090096B /* LoginWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWindowController.swift; sourceTree = "<group>"; };
+		0F97EF3B2096F1FD0090096B /* LoginImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImageButton.swift; sourceTree = "<group>"; };
+		0F97EF4B209713F60090096B /* LoginAccountTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountTextField.swift; sourceTree = "<group>"; };
+		0F97EF4D209715C30090096B /* LoginPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordTextField.swift; sourceTree = "<group>"; };
+		0F97EF4F2097259E0090096B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0F97EF56209729BC0090096B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		0F97EF5A20972DA60090096B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/i18n.strings; sourceTree = "<group>"; };
+		0F97EF5C20972DA90090096B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/i18n.strings"; sourceTree = "<group>"; };
+		0F97EF5D20972FA50090096B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		0F97EF5E20973D5B0090096B /* IconArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconArrowButton.swift; sourceTree = "<group>"; };
+		0F97EF6020973F910090096B /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		0F97EF6220975B6C0090096B /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		0F97EF642097A1920090096B /* settingViewSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = settingViewSound.wav; sourceTree = "<group>"; };
+		0F97EF682097A3530090096B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F97EF692097A3530090096B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +106,7 @@
 				0F97EF1F2096E1DD0090096B /* qqTests */,
 				0F97EF2A2096E1DE0090096B /* qqUITests */,
 				0F97EF0B2096E1DD0090096B /* Products */,
+				0F97EF672097A3520090096B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,12 +123,22 @@
 		0F97EF0C2096E1DD0090096B /* qq */ = {
 			isa = PBXGroup;
 			children = (
+				0F97EF662097A1A20090096B /* sounds */,
+				0F97EF172096E1DD0090096B /* qq.entitlements */,
+				0F97EF162096E1DD0090096B /* Info.plist */,
 				0F97EF0D2096E1DD0090096B /* AppDelegate.swift */,
+				0F97EF4F2097259E0090096B /* Constants.swift */,
+				0F97EF5E20973D5B0090096B /* IconArrowButton.swift */,
+				0F97EF6020973F910090096B /* ImageButton.swift */,
+				0F97EF4B209713F60090096B /* LoginAccountTextField.swift */,
+				0F97EF3B2096F1FD0090096B /* LoginImageButton.swift */,
+				0F97EF4D209715C30090096B /* LoginPasswordTextField.swift */,
+				0F97EF392096E2160090096B /* LoginWindowController.swift */,
 				0F97EF0F2096E1DD0090096B /* ViewController.swift */,
 				0F97EF112096E1DD0090096B /* Assets.xcassets */,
+				0F97EF5B20972DA60090096B /* i18n.strings */,
 				0F97EF132096E1DD0090096B /* Main.storyboard */,
-				0F97EF162096E1DD0090096B /* Info.plist */,
-				0F97EF172096E1DD0090096B /* qq.entitlements */,
+				0F97EF6220975B6C0090096B /* OptionsViewController.swift */,
 			);
 			path = qq;
 			sourceTree = "<group>";
@@ -122,6 +159,22 @@
 				0F97EF2D2096E1DE0090096B /* Info.plist */,
 			);
 			path = qqUITests;
+			sourceTree = "<group>";
+		};
+		0F97EF662097A1A20090096B /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				0F97EF642097A1920090096B /* settingViewSound.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		0F97EF672097A3520090096B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F97EF682097A3530090096B /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +263,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 0F97EF012096E1DD0090096B;
 			productRefGroup = 0F97EF0B2096E1DD0090096B /* Products */;
@@ -229,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F97EF122096E1DD0090096B /* Assets.xcassets in Resources */,
+				0F97EF5920972DA60090096B /* i18n.strings in Resources */,
+				0F97EF652097A1930090096B /* settingViewSound.wav in Resources */,
 				0F97EF152096E1DD0090096B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +311,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F97EF102096E1DD0090096B /* ViewController.swift in Sources */,
+				0F97EF6120973F910090096B /* ImageButton.swift in Sources */,
+				0F97EF3C2096F1FD0090096B /* LoginImageButton.swift in Sources */,
 				0F97EF0E2096E1DD0090096B /* AppDelegate.swift in Sources */,
+				0F97EF3A2096E2160090096B /* LoginWindowController.swift in Sources */,
+				0F97EF5F20973D5B0090096B /* IconArrowButton.swift in Sources */,
+				0F97EF502097259E0090096B /* Constants.swift in Sources */,
+				0F97EF4E209715C30090096B /* LoginPasswordTextField.swift in Sources */,
+				0F97EF4C209713F60090096B /* LoginAccountTextField.swift in Sources */,
+				0F97EF6320975B6C0090096B /* OptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +359,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				0F97EF142096E1DD0090096B /* Base */,
+				0F97EF56209729BC0090096B /* zh-Hans */,
+				0F97EF5D20972FA50090096B /* en */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F97EF5B20972DA60090096B /* i18n.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F97EF5A20972DA60090096B /* en */,
+				0F97EF5C20972DA90090096B /* zh-Hans */,
+			);
+			name = i18n.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -306,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -366,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

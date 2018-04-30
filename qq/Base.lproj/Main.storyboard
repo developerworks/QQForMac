@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,22 +675,22 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="qq" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-325" y="18"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                <windowController id="B8D-0N-5wS" customClass="LoginWindowController" customModule="qq" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
+                        <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
@@ -698,20 +700,238 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-515" y="258"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="qq" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="248" height="316"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Z4X-La-8Np">
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="316"/>
+                                <subviews>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="eZQ-xe-57c">
+                                        <rect key="frame" x="9" y="295" width="14" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="14" id="WUM-DW-e3q"/>
+                                            <constraint firstAttribute="height" constant="14" id="bqk-fI-z83"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon-close-normal" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="IvM-AG-MRS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="terminate:" target="XfG-lQ-9wD" id="SSo-r3-yXi"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Kkl-7R-uRl" customClass="LoginImageButton" customModule="qq" customModuleProvider="target">
+                                        <rect key="frame" x="74" y="176" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="XuM-Sb-7De"/>
+                                            <constraint firstAttribute="height" constant="100" id="Ygr-45-xwI"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="avatar" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="GNL-mf-j3D">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sgq-sI-g74" customClass="LoginAccountTextField" customModule="qq" customModuleProvider="target">
+                                        <rect key="frame" x="34" y="107" width="180" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="THb-SE-QVj"/>
+                                            <constraint firstAttribute="height" constant="24" id="iCN-t6-1Hf"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" placeholderString="输入账号" drawsBackground="YES" id="Eos-C4-LU6">
+                                            <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="jQL-Ce-oye"/>
+                                            <font key="font" metaFont="system" size="16"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLE-lX-0bU">
+                                        <rect key="frame" x="34" y="72" width="180" height="24"/>
+                                        <subviews>
+                                            <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-mI-pmw" customClass="LoginPasswordTextField" customModule="qq" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="160" id="1wz-JM-SDY"/>
+                                                    <constraint firstAttribute="height" constant="24" id="RLz-oo-Bm2"/>
+                                                </constraints>
+                                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="输入密码" drawsBackground="YES" usesSingleLineMode="YES" id="jNZ-3o-xkY">
+                                                    <font key="font" metaFont="system" size="16"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <allowedInputSourceLocales>
+                                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                                    </allowedInputSourceLocales>
+                                                </secureTextFieldCell>
+                                            </secureTextField>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="OyO-9s-tzl">
+                                                <rect key="frame" x="160" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="Y0X-RR-AjL"/>
+                                                    <constraint firstAttribute="height" constant="20" id="xwP-yG-sF3"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon-enter-normal" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyUpOrDown" inset="2" id="bq7-Fx-yVM">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="handleLogin:" target="XfG-lQ-9wD" id="DoI-dG-zHk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="5ZI-7u-cq6"/>
+                                            <constraint firstAttribute="width" constant="180" id="elL-aw-mYo"/>
+                                        </constraints>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-qe-66D">
+                                        <rect key="frame" x="34" y="99" width="180" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="F7z-ju-Qhc"/>
+                                            <constraint firstAttribute="width" constant="180" id="mfz-pW-Je0"/>
+                                        </constraints>
+                                    </box>
+                                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="88x-bq-QwV">
+                                        <rect key="frame" x="34" y="64" width="180" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="aSE-5t-FXG"/>
+                                            <constraint firstAttribute="width" constant="180" id="uLe-R6-zN9"/>
+                                        </constraints>
+                                    </box>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="lpR-92-QAA">
+                                        <rect key="frame" x="117" y="13" width="14" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="5jF-g5-nK8"/>
+                                            <constraint firstAttribute="width" constant="14" id="JhZ-d5-fP0"/>
+                                            <constraint firstAttribute="width" constant="14" id="fdO-ef-idP"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Icon-arrow-normal" imagePosition="only" alignment="center" alternateImage="Icon-arrow-hover" imageScaling="proportionallyUpOrDown" sound="buttonCell:5R2-WT-1fM:sound" inset="2" id="5R2-WT-1fM">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openOrCloseLoginOptions:" target="XfG-lQ-9wD" id="KcP-ON-eh0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sgq-sI-g74" firstAttribute="top" secondItem="Kkl-7R-uRl" secondAttribute="bottom" constant="45" id="289-QU-pvI"/>
+                                    <constraint firstItem="Kkl-7R-uRl" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="3f1-ES-efb"/>
+                                    <constraint firstItem="Kkl-7R-uRl" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="40" id="9Kr-sj-Hja"/>
+                                    <constraint firstItem="88x-bq-QwV" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="Bb1-D6-wPL"/>
+                                    <constraint firstItem="9O3-qe-66D" firstAttribute="top" secondItem="Sgq-sI-g74" secondAttribute="bottom" constant="5" id="I7p-rj-CnJ"/>
+                                    <constraint firstItem="9O3-qe-66D" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="Icn-eX-qCE"/>
+                                    <constraint firstItem="PLE-lX-0bU" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="QLp-gY-taF"/>
+                                    <constraint firstItem="eZQ-xe-57c" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="7" id="Wtq-P5-j2W"/>
+                                    <constraint firstItem="lpR-92-QAA" firstAttribute="centerX" secondItem="88x-bq-QwV" secondAttribute="centerX" id="ZHL-tE-WOw"/>
+                                    <constraint firstItem="eZQ-xe-57c" firstAttribute="leading" secondItem="Z4X-La-8Np" secondAttribute="leading" constant="9" id="agZ-h3-BCF"/>
+                                    <constraint firstAttribute="height" constant="316" id="f3w-tS-HSk"/>
+                                    <constraint firstAttribute="bottom" secondItem="lpR-92-QAA" secondAttribute="bottom" constant="13" id="gy8-Ga-yBr"/>
+                                    <constraint firstItem="Sgq-sI-g74" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="jZa-6b-XIK"/>
+                                    <constraint firstItem="88x-bq-QwV" firstAttribute="top" secondItem="PLE-lX-0bU" secondAttribute="bottom" constant="5" id="o6u-ee-t5K"/>
+                                    <constraint firstAttribute="width" constant="248" id="pvX-uU-KfE"/>
+                                    <constraint firstItem="PLE-lX-0bU" firstAttribute="top" secondItem="Sgq-sI-g74" secondAttribute="bottom" constant="11" id="qcZ-xh-Z1G"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Z4X-La-8Np" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="4Xl-wd-Z72"/>
+                            <constraint firstAttribute="bottom" secondItem="Z4X-La-8Np" secondAttribute="bottom" id="Ted-59-GpB"/>
+                            <constraint firstAttribute="trailing" secondItem="Z4X-La-8Np" secondAttribute="trailing" id="dKW-8B-LIz"/>
+                            <constraint firstItem="Z4X-La-8Np" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="rIj-2U-gmm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IconArrowButton" destination="lpR-92-QAA" id="u2A-Oy-bf2"/>
+                        <outlet property="accountTextField" destination="Sgq-sI-g74" id="TL5-OF-2fX"/>
+                        <outlet property="loginButton" destination="OyO-9s-tzl" id="UAG-kA-WfJ"/>
+                        <outlet property="passwordTextField" destination="gWy-mI-pmw" id="9fJ-qm-bS2"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-55" y="258"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="Pwn-dh-Vf5">
+            <objects>
+                <viewController identifier="optionsViewController" storyboardIdentifier="optionsViewController" id="Ww0-qA-iae" customClass="OptionsViewController" customModule="qq" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="5FU-WE-I6c">
+                        <rect key="frame" x="0.0" y="0.0" width="248" height="75"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LbF-hq-kPa">
+                                <rect key="frame" x="18" y="39" width="72" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="记住密码" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="d9q-NY-xwD">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8F-wz-tPp">
+                                <rect key="frame" x="18" y="12" width="72" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="自动登陆" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="smS-bm-yeR">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8u2-2I-y3j">
+                                <rect key="frame" x="159" y="39" width="64" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="忘记密码" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="4zE-NK-xad">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ME-eR-Iaj">
+                                <rect key="frame" x="159" y="12" width="64" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="注册账号" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="C7X-6B-qhu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="ale-TM-RiV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="514"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon-arrow-hover" width="14" height="14"/>
+        <image name="Icon-arrow-normal" width="14" height="14"/>
+        <image name="avatar" width="446" height="446"/>
+        <image name="icon-close-normal" width="14" height="14"/>
+        <image name="icon-enter-normal" width="20" height="20"/>
+        <sound name="buttonCell:5R2-WT-1fM:sound">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGMDFYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKoHCBUb
+HCIoKSotVSRudWxs1gkKCwwNDg8QERITFFYkY2xhc3NaTlNEZWxlZ2F0ZV8QEU5TU291bmRTaG91bGRM
+b29wVU5TVXJsXxARTlNTb3VuZENoYW5uZWxNYXBdTlNTb3VuZFZvbHVtZYAJgAAIgAKABSI/gAAA0xYJ
+FxAZGldOUy5iYXNlW05TLnJlbGF0aXZlgACABIADXxBFZmlsZTovLy9Vc2Vycy9oZXpoaXFpYW5nL21h
+Y29zLWFwcHMvcXEvcXEvU291bmRzL1NldHRpbmdWaWV3U291bmQud2F20h0eHyBaJGNsYXNzbmFtZVgk
+Y2xhc3Nlc1VOU1VSTKIfIVhOU09iamVjdNIjCSQnWk5TLm9iamVjdHOiJSaABoAHgAgQABAB0h0eKyxX
+TlNBcnJheaIrIdIdHi4vV05TU291bmSiLiFfEA9OU0tleWVkQXJjaGl2ZXLRMjNUcm9vdIABAAgAEQAa
+ACMALQAyADcAQgBIAFUAXABnAHsAgQCVAKMApQCnAKgAqgCsALEAuADAAMwAzgDQANIBGgEfASoBMwE5
+ATwBRQFKAVUBWAFaAVwBXgFgAWIBZwFvAXIBdwF/AYIBlAGXAZwAAAAAAAACAQAAAAAAAAA0AAAAAAAA
+AAAAAAAAAAABng
+</mutableData>
+        </sound>
+    </resources>
 </document>
