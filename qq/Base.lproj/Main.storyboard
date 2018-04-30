@@ -889,7 +889,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="248" height="285"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xzz-jL-CU1">
-                                    <rect key="frame" x="68" y="82" width="112" height="112"/>
+                                    <rect key="frame" x="68" y="83" width="112" height="112"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="112" id="VJU-CT-EaE"/>
                                         <constraint firstAttribute="width" constant="112" id="eFm-t3-VQO"/>
@@ -897,24 +897,22 @@
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="scan-qrcode" id="rEL-ld-P4Q"/>
                                 </imageView>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iZQ-yB-m4L">
-                                    <rect key="frame" x="36" y="239" width="177" height="20"/>
+                                    <rect key="frame" x="36" y="240" width="177" height="20"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="使用QQ手机版扫描登录" id="cHl-aj-jt9">
                                         <font key="font" size="16" name=".PingFangSC-Medium"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egX-Fl-SbB">
-                                    <rect key="frame" x="161" y="10" width="77" height="18"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egX-Fl-SbB">
+                                    <rect key="frame" x="161" y="15" width="77" height="16"/>
                                     <buttonCell key="cell" type="bevel" title="下载手机QQ" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="DOq-p6-jkk">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="12"/>
                                     </buttonCell>
                                 </button>
-                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfK-EU-Tga">
-                                    <rect key="frame" x="12" y="10" width="60" height="18"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfK-EU-Tga">
+                                    <rect key="frame" x="12" y="15" width="60" height="18"/>
                                     <buttonCell key="cell" type="square" title="账号登录" bezelStyle="shadowlessSquare" image="back_normal" imagePosition="left" alignment="center" state="on" inset="2" id="9Dd-K0-1Zz">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="12"/>
@@ -930,9 +928,11 @@
                                 </imageView>
                             </subviews>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="egX-Fl-SbB" secondAttribute="bottom" constant="15" id="4QW-IB-x8C"/>
+                                <constraint firstAttribute="bottom" secondItem="GfK-EU-Tga" secondAttribute="bottom" constant="15" id="DZs-gN-7sc"/>
                                 <constraint firstAttribute="height" constant="285" id="QL9-Mz-oNA"/>
                                 <constraint firstItem="xzz-jL-CU1" firstAttribute="centerX" secondItem="sHo-iB-GSz" secondAttribute="centerX" id="SKr-Tw-2cD"/>
-                                <constraint firstItem="iZQ-yB-m4L" firstAttribute="top" secondItem="sHo-iB-GSz" secondAttribute="top" constant="26.5" id="Wdc-G0-lu4"/>
+                                <constraint firstItem="iZQ-yB-m4L" firstAttribute="top" secondItem="sHo-iB-GSz" secondAttribute="top" constant="25" id="Wdc-G0-lu4"/>
                                 <constraint firstItem="xzz-jL-CU1" firstAttribute="top" secondItem="iZQ-yB-m4L" secondAttribute="bottom" constant="45" id="ZTA-Rd-l1z"/>
                                 <constraint firstItem="iZQ-yB-m4L" firstAttribute="centerX" secondItem="sHo-iB-GSz" secondAttribute="centerX" id="l81-bg-chG"/>
                                 <constraint firstAttribute="width" constant="248" id="nmK-Ra-jfs"/>

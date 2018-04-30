@@ -33,6 +33,8 @@ class ViewController: NSViewController {
             .instantiateController(
                 withIdentifier: NSStoryboard.SceneIdentifier.init(rawValue: "optionsViewController")
             ) as! OptionsViewController
+        
+        window.backgroundColor = .white
         return window
     }()
 
