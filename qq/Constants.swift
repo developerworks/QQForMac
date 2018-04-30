@@ -11,4 +11,5 @@ import Foundation
 class Constants {
     public static let accountPlaceHolder: String = "输入账号"
     public static let passwordPlaceHolder: String = "输入密码"
+    public static let qqDownloadLink: String = "http://im.qq.com/mobileqq/"
 }

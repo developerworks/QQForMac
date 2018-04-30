@@ -123,7 +123,6 @@
 		0F97EF0C2096E1DD0090096B /* qq */ = {
 			isa = PBXGroup;
 			children = (
-				0F97EF662097A1A20090096B /* sounds */,
 				0F97EF172096E1DD0090096B /* qq.entitlements */,
 				0F97EF162096E1DD0090096B /* Info.plist */,
 				0F97EF0D2096E1DD0090096B /* AppDelegate.swift */,
@@ -134,11 +133,12 @@
 				0F97EF3B2096F1FD0090096B /* LoginImageButton.swift */,
 				0F97EF4D209715C30090096B /* LoginPasswordTextField.swift */,
 				0F97EF392096E2160090096B /* LoginWindowController.swift */,
+				0F97EF6220975B6C0090096B /* OptionsViewController.swift */,
 				0F97EF0F2096E1DD0090096B /* ViewController.swift */,
 				0F97EF112096E1DD0090096B /* Assets.xcassets */,
 				0F97EF5B20972DA60090096B /* i18n.strings */,
 				0F97EF132096E1DD0090096B /* Main.storyboard */,
-				0F97EF6220975B6C0090096B /* OptionsViewController.swift */,
+				0F97EF662097A1A20090096B /* sounds */,
 			);
 			path = qq;
 			sourceTree = "<group>";
