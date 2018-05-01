@@ -739,7 +739,7 @@
                                         </buttonCell>
                                     </button>
                                     <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sgq-sI-g74" customClass="LoginAccountTextField" customModule="qq" customModuleProvider="target">
-                                        <rect key="frame" x="34" y="107" width="180" height="24"/>
+                                        <rect key="frame" x="34" y="101" width="180" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="THb-SE-QVj"/>
                                             <constraint firstAttribute="height" constant="24" id="iCN-t6-1Hf"/>
@@ -752,7 +752,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLE-lX-0bU">
-                                        <rect key="frame" x="34" y="72" width="180" height="24"/>
+                                        <rect key="frame" x="34" y="66" width="180" height="24"/>
                                         <subviews>
                                             <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-mI-pmw" customClass="LoginPasswordTextField" customModule="qq" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
@@ -798,14 +798,14 @@
                                         </customSpacing>
                                     </stackView>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-qe-66D">
-                                        <rect key="frame" x="34" y="99" width="180" height="5"/>
+                                        <rect key="frame" x="34" y="93" width="180" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="F7z-ju-Qhc"/>
                                             <constraint firstAttribute="width" constant="180" id="mfz-pW-Je0"/>
                                         </constraints>
                                     </box>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="88x-bq-QwV">
-                                        <rect key="frame" x="34" y="64" width="180" height="5"/>
+                                        <rect key="frame" x="34" y="58" width="180" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="aSE-5t-FXG"/>
                                             <constraint firstAttribute="width" constant="180" id="uLe-R6-zN9"/>
@@ -827,7 +827,7 @@
                                         </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="yhY-dS-x6h">
-                                        <rect key="frame" x="224" y="292" width="16" height="16"/>
+                                        <rect key="frame" x="224" y="293" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="7ZX-DB-3AT"/>
                                             <constraint firstAttribute="width" constant="16" id="Yn3-Gl-dU5"/>
@@ -842,7 +842,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Sgq-sI-g74" firstAttribute="top" secondItem="Kkl-7R-uRl" secondAttribute="bottom" constant="45" id="289-QU-pvI"/>
+                                    <constraint firstItem="Sgq-sI-g74" firstAttribute="top" secondItem="Kkl-7R-uRl" secondAttribute="bottom" constant="51" id="289-QU-pvI"/>
                                     <constraint firstItem="Kkl-7R-uRl" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="3f1-ES-efb"/>
                                     <constraint firstItem="Kkl-7R-uRl" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="40" id="9Kr-sj-Hja"/>
                                     <constraint firstItem="88x-bq-QwV" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="Bb1-D6-wPL"/>
@@ -855,7 +855,7 @@
                                     <constraint firstAttribute="height" constant="316" id="f3w-tS-HSk"/>
                                     <constraint firstAttribute="bottom" secondItem="lpR-92-QAA" secondAttribute="bottom" constant="13" id="gy8-Ga-yBr"/>
                                     <constraint firstItem="Sgq-sI-g74" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="jZa-6b-XIK"/>
-                                    <constraint firstItem="yhY-dS-x6h" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="8" id="mrU-ZI-Nbv"/>
+                                    <constraint firstItem="yhY-dS-x6h" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="7" id="mrU-ZI-Nbv"/>
                                     <constraint firstItem="88x-bq-QwV" firstAttribute="top" secondItem="PLE-lX-0bU" secondAttribute="bottom" constant="5" id="o6u-ee-t5K"/>
                                     <constraint firstAttribute="trailing" secondItem="yhY-dS-x6h" secondAttribute="trailing" constant="8" id="pX6-nX-NtT"/>
                                     <constraint firstAttribute="width" constant="248" id="pvX-uU-KfE"/>
@@ -871,8 +871,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="IconArrowButton" destination="lpR-92-QAA" id="u2A-Oy-bf2"/>
                         <outlet property="accountTextField" destination="Sgq-sI-g74" id="TL5-OF-2fX"/>
+                        <outlet property="iconArrowButton" destination="lpR-92-QAA" id="u2A-Oy-bf2"/>
                         <outlet property="loginButton" destination="OyO-9s-tzl" id="UAG-kA-WfJ"/>
                         <outlet property="loginQrView" destination="b93-Dy-TbJ" id="Qe6-jk-hDs"/>
                         <outlet property="passwordTextField" destination="gWy-mI-pmw" id="9fJ-qm-bS2"/>
@@ -904,18 +904,18 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egX-Fl-SbB">
-                                    <rect key="frame" x="161" y="15" width="77" height="16"/>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="egX-Fl-SbB">
+                                    <rect key="frame" x="161" y="15" width="72" height="16"/>
                                     <buttonCell key="cell" type="bevel" title="下载手机QQ" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="DOq-p6-jkk">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system" size="12"/>
+                                        <font key="font" metaFont="cellTitle"/>
                                     </buttonCell>
                                 </button>
-                                <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfK-EU-Tga">
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GfK-EU-Tga">
                                     <rect key="frame" x="12" y="15" width="60" height="18"/>
                                     <buttonCell key="cell" type="square" title="账号登录" bezelStyle="shadowlessSquare" image="back_normal" imagePosition="left" alignment="center" state="on" inset="2" id="9Dd-K0-1Zz">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system" size="12"/>
+                                        <font key="font" metaFont="cellTitle"/>
                                     </buttonCell>
                                     <connections>
                                         <action selector="backToLogin:" target="XfG-lQ-9wD" id="DFW-Cw-Xzz"/>
@@ -934,9 +934,12 @@
                                 <constraint firstItem="xzz-jL-CU1" firstAttribute="centerX" secondItem="sHo-iB-GSz" secondAttribute="centerX" id="SKr-Tw-2cD"/>
                                 <constraint firstItem="iZQ-yB-m4L" firstAttribute="top" secondItem="sHo-iB-GSz" secondAttribute="top" constant="25" id="Wdc-G0-lu4"/>
                                 <constraint firstItem="xzz-jL-CU1" firstAttribute="top" secondItem="iZQ-yB-m4L" secondAttribute="bottom" constant="45" id="ZTA-Rd-l1z"/>
+                                <constraint firstItem="egX-Fl-SbB" firstAttribute="leading" secondItem="GfK-EU-Tga" secondAttribute="trailing" constant="89" id="dRR-06-qs3"/>
                                 <constraint firstItem="iZQ-yB-m4L" firstAttribute="centerX" secondItem="sHo-iB-GSz" secondAttribute="centerX" id="l81-bg-chG"/>
+                                <constraint firstItem="GfK-EU-Tga" firstAttribute="leading" secondItem="sHo-iB-GSz" secondAttribute="leading" constant="12" id="mwn-In-mac"/>
                                 <constraint firstAttribute="width" constant="248" id="nmK-Ra-jfs"/>
                                 <constraint firstItem="xzz-jL-CU1" firstAttribute="top" secondItem="iZQ-yB-m4L" secondAttribute="bottom" constant="45" id="ohe-Of-6oE"/>
+                                <constraint firstAttribute="trailing" secondItem="egX-Fl-SbB" secondAttribute="trailing" constant="15" id="vwV-KL-Ckq"/>
                             </constraints>
                         </customView>
                     </subviews>

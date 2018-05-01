@@ -1,12 +1,12 @@
 import Cocoa
-import AVFoundation
+//import AVFoundation
 
 class ViewController: NSViewController {
 
     @IBOutlet weak var accountTextField: LoginAccountTextField!
     @IBOutlet weak var passwordTextField: LoginPasswordTextField!
     @IBOutlet weak var loginButton: NSButton!
-    @IBOutlet weak var IconArrowButton: IconArrowButton!
+    @IBOutlet weak var iconArrowButton: IconArrowButton!
     @IBOutlet weak var qrViewButton: NSButton!
     @IBOutlet weak var qrCodeRefresher: NSImageView!
     
@@ -14,9 +14,11 @@ class ViewController: NSViewController {
     @IBOutlet var loginQrView: NSView!
     
     // MARK: 子窗口相对父窗口在Y轴上的偏移量
-    var currentOffsetY: CGFloat = 3
-    let animateDuration: TimeInterval = 0.25
-    var audioPlayer: AVAudioPlayer!
+    var currentOffsetY: CGFloat = 10
+    let animateDuration: TimeInterval = 0.28
+    //    var audioPlayer: AVAudioPlayer!
+    var sound: NSSound!
+
 
     // 子窗口延迟初始化
     lazy var optionsWindow: NSWindow = {
@@ -38,13 +40,15 @@ class ViewController: NSViewController {
         return window
     }()
 
+    
+    //////////////////////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initAudioPlayer()
+        self.initAudioResources()
         self.registerObservers()
         
-//        self.view.layer?.shadowOpacity = 0.2 // opacity, 20%
-//        self.view.layer?.shadowColor = UIColor.black.cgColor
+        //        self.view.layer?.shadowOpacity = 0.2 // opacity, 20%
+        //        self.view.layer?.shadowColor = UIColor.black.cgColor
         self.view.layer?.shadowRadius = 1 // HALF of blur
         self.view.layer?.shadowOffset = CGSize(width: 0, height: 2) // Spread x, y
         self.view.layer?.masksToBounds =  false
@@ -53,22 +57,27 @@ class ViewController: NSViewController {
         self.loginQrView.layer?.backgroundColor = NSColor.white.cgColor
         
         qrCodeRefresher.isHidden = true
+        
+        
     }
 
     override func viewDidAppear() {
         super.viewDidAppear()
     }
     
-    private func initAudioPlayer() {
-        let url = Bundle.main.url(forResource: "settingViewSound", withExtension: "wav")
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url!)
-            audioPlayer.prepareToPlay()
-            // 播放
-            //            audioPlayer.play()
-        } catch let error as NSError {
-            print(error.debugDescription)
-        }
+    private func initAudioResources() {
+        sound = NSSound(named: NSSound.Name("settingViewSound.wav"))!
+        //        if false {
+        //            let url = Bundle.main.url(forResource: "settingViewSound", withExtension: "wav")
+        //            do {
+        //                audioPlayer = try AVAudioPlayer(contentsOf: url!)
+        //                audioPlayer.prepareToPlay()
+        //                // 播放
+        //                //            audioPlayer.play()
+        //            } catch let error as NSError {
+        //                print(error.debugDescription)
+        //            }
+        //        }
     }
     
     private func registerObservers() {
@@ -87,15 +96,17 @@ class ViewController: NSViewController {
         NotificationCenter.default.addObserver(
             forName: NSWindow.willMoveNotification, object: nil, queue: OperationQueue.main
         ) { (notification) in
-            self.optionsWindow.animator()
-                .setFrame(self.makeRect(offsetY: self.currentOffsetY), display: true)
-            self.view.window?.animator()
-                .addChildWindow(self.optionsWindow, ordered: NSWindow.OrderingMode.below)
+            if self.iconArrowButton.state == .off {
+                self.optionsWindow.animator()
+                    .setFrame(self.makeRect(offsetY: self.currentOffsetY), display: true)
+                self.view.window?.animator()
+                    .addChildWindow(self.optionsWindow, ordered: NSWindow.OrderingMode.below)
+            }
         }
-//        NotificationCenter.default.addObserver(
-//            self, selector: #selector(self.changeChildWindowPos(notification:)),
-//            name: NSWindow.willMoveNotification, object: nil
-//        )
+        //        NotificationCenter.default.addObserver(
+        //            self, selector: #selector(self.changeChildWindowPos(notification:)),
+        //            name: NSWindow.willMoveNotification, object: nil
+        //        )
     }
 
     @objc func changeChildWindowPos(notification: Notification) {
@@ -142,12 +153,11 @@ class ViewController: NSViewController {
             context.duration = self.animateDuration
             context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
             if sender.state == .on {
-                self.optionsWindow.animator().setFrame(self.makeRect(offsetY: -78), display: true)
+                self.optionsWindow.animator().setFrame(self.makeRect(offsetY: -75), display: true)
                 // 添加到父窗口
                 self.view.window?.animator().addChildWindow(self.optionsWindow, ordered: .below)
             } else {
                 // 设置子窗口的位置, 并从父窗口中删除
-                
                 self.optionsWindow.animator().setFrame(self.makeRect(offsetY: 22), display: false)
                 self.view.window?.animator().removeChildWindow(self.optionsWindow)
                 self.optionsWindow.hasShadow = false
@@ -156,7 +166,8 @@ class ViewController: NSViewController {
             if sender.state == .on {
                 self.optionsWindow.hasShadow = true
             }
-            self.audioPlayer.play()
+            self.sound.play()
+            //            self.audioPlayer.play()
         }
     }
     
