@@ -727,23 +727,9 @@
                                             <action selector="terminate:" target="XfG-lQ-9wD" id="SSo-r3-yXi"/>
                                         </connections>
                                     </button>
-                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Kkl-7R-uRl" customClass="LoginImageButton" customModule="qq" customModuleProvider="target">
-                                        <rect key="frame" x="74" y="176" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="XuM-Sb-7De"/>
-                                            <constraint firstAttribute="height" constant="100" id="Ygr-45-xwI"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="avatar" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="GNL-mf-j3D">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sgq-sI-g74" customClass="LoginAccountTextField" customModule="qq" customModuleProvider="target">
+                                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sgq-sI-g74" customClass="LoginAccountTextField" customModule="qq" customModuleProvider="target">
                                         <rect key="frame" x="34" y="101" width="180" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="THb-SE-QVj"/>
-                                            <constraint firstAttribute="height" constant="24" id="iCN-t6-1Hf"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" placeholderString="输入账号" drawsBackground="YES" id="Eos-C4-LU6">
                                             <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="jQL-Ce-oye"/>
                                             <font key="font" metaFont="system" size="16"/>
@@ -751,8 +737,9 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLE-lX-0bU">
+                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLE-lX-0bU">
                                         <rect key="frame" x="34" y="66" width="180" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-mI-pmw" customClass="LoginPasswordTextField" customModule="qq" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
@@ -784,10 +771,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="5ZI-7u-cq6"/>
-                                            <constraint firstAttribute="width" constant="180" id="elL-aw-mYo"/>
-                                        </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
@@ -797,27 +780,17 @@
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-qe-66D">
-                                        <rect key="frame" x="34" y="93" width="180" height="5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="F7z-ju-Qhc"/>
-                                            <constraint firstAttribute="width" constant="180" id="mfz-pW-Je0"/>
-                                        </constraints>
+                                    <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-qe-66D">
+                                        <rect key="frame" x="34" y="93" width="180" height="4"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </box>
-                                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="88x-bq-QwV">
+                                    <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="88x-bq-QwV">
                                         <rect key="frame" x="34" y="58" width="180" height="5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="aSE-5t-FXG"/>
-                                            <constraint firstAttribute="width" constant="180" id="uLe-R6-zN9"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </box>
-                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="lpR-92-QAA">
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpR-92-QAA">
                                         <rect key="frame" x="117" y="13" width="14" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="5jF-g5-nK8"/>
-                                            <constraint firstAttribute="width" constant="14" id="JhZ-d5-fP0"/>
-                                            <constraint firstAttribute="width" constant="14" id="fdO-ef-idP"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Icon-arrow-normal" imagePosition="only" alignment="center" alternateImage="Icon-arrow-hover" imageScaling="proportionallyUpOrDown" sound="buttonCell:5R2-WT-1fM:sound" inset="2" id="5R2-WT-1fM">
                                             <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -827,7 +800,7 @@
                                         </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="yhY-dS-x6h">
-                                        <rect key="frame" x="224" y="293" width="16" height="16"/>
+                                        <rect key="frame" x="224" y="294" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="7ZX-DB-3AT"/>
                                             <constraint firstAttribute="width" constant="16" id="Yn3-Gl-dU5"/>
@@ -840,26 +813,44 @@
                                             <action selector="openQrcodeLoginView:" target="XfG-lQ-9wD" id="4fn-W1-DdN"/>
                                         </connections>
                                     </button>
+                                    <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="wiq-r0-4ar">
+                                        <rect key="frame" x="45" y="172" width="158" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="PYf-7p-Yyo">
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <collectionView focusRingType="none" ambiguous="YES" id="NtF-m0-Dfz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="WX4-gp-dJq">
+                                                        <size key="itemSize" width="40" height="40"/>
+                                                    </collectionViewFlowLayout>
+                                                    <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="XfG-lQ-9wD" id="gyo-57-Abv"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.97269672927461137" green="0.97269672927461137" blue="0.97269672927461137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ke2-Sy-Txc">
+                                            <rect key="frame" x="-100" y="-100" width="0.0" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="H5O-jh-Ybg">
+                                            <rect key="frame" x="141" y="1" width="16" height="98"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Sgq-sI-g74" firstAttribute="top" secondItem="Kkl-7R-uRl" secondAttribute="bottom" constant="51" id="289-QU-pvI"/>
-                                    <constraint firstItem="Kkl-7R-uRl" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="3f1-ES-efb"/>
-                                    <constraint firstItem="Kkl-7R-uRl" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="40" id="9Kr-sj-Hja"/>
-                                    <constraint firstItem="88x-bq-QwV" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="Bb1-D6-wPL"/>
-                                    <constraint firstItem="9O3-qe-66D" firstAttribute="top" secondItem="Sgq-sI-g74" secondAttribute="bottom" constant="5" id="I7p-rj-CnJ"/>
-                                    <constraint firstItem="9O3-qe-66D" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="Icn-eX-qCE"/>
-                                    <constraint firstItem="PLE-lX-0bU" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="QLp-gY-taF"/>
                                     <constraint firstItem="eZQ-xe-57c" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="7" id="Wtq-P5-j2W"/>
-                                    <constraint firstItem="lpR-92-QAA" firstAttribute="centerX" secondItem="88x-bq-QwV" secondAttribute="centerX" id="ZHL-tE-WOw"/>
                                     <constraint firstItem="eZQ-xe-57c" firstAttribute="leading" secondItem="Z4X-La-8Np" secondAttribute="leading" constant="9" id="agZ-h3-BCF"/>
                                     <constraint firstAttribute="height" constant="316" id="f3w-tS-HSk"/>
-                                    <constraint firstAttribute="bottom" secondItem="lpR-92-QAA" secondAttribute="bottom" constant="13" id="gy8-Ga-yBr"/>
-                                    <constraint firstItem="Sgq-sI-g74" firstAttribute="centerX" secondItem="Z4X-La-8Np" secondAttribute="centerX" id="jZa-6b-XIK"/>
-                                    <constraint firstItem="yhY-dS-x6h" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="7" id="mrU-ZI-Nbv"/>
-                                    <constraint firstItem="88x-bq-QwV" firstAttribute="top" secondItem="PLE-lX-0bU" secondAttribute="bottom" constant="5" id="o6u-ee-t5K"/>
+                                    <constraint firstItem="yhY-dS-x6h" firstAttribute="top" secondItem="Z4X-La-8Np" secondAttribute="top" constant="6" id="mrU-ZI-Nbv"/>
                                     <constraint firstAttribute="trailing" secondItem="yhY-dS-x6h" secondAttribute="trailing" constant="8" id="pX6-nX-NtT"/>
                                     <constraint firstAttribute="width" constant="248" id="pvX-uU-KfE"/>
-                                    <constraint firstItem="PLE-lX-0bU" firstAttribute="top" secondItem="Sgq-sI-g74" secondAttribute="bottom" constant="11" id="qcZ-xh-Z1G"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -872,6 +863,7 @@
                     </view>
                     <connections>
                         <outlet property="accountTextField" destination="Sgq-sI-g74" id="TL5-OF-2fX"/>
+                        <outlet property="collectionView" destination="NtF-m0-Dfz" id="GmZ-zh-T3q"/>
                         <outlet property="iconArrowButton" destination="lpR-92-QAA" id="u2A-Oy-bf2"/>
                         <outlet property="loginButton" destination="OyO-9s-tzl" id="UAG-kA-WfJ"/>
                         <outlet property="loginQrView" destination="b93-Dy-TbJ" id="Qe6-jk-hDs"/>
@@ -1005,7 +997,6 @@
         <image name="Icon-arrow-hover" width="14" height="14"/>
         <image name="Icon-arrow-normal" width="14" height="14"/>
         <image name="QRCode_refresh" width="48" height="48"/>
-        <image name="avatar" width="446" height="446"/>
         <image name="back_normal" width="6" height="18"/>
         <image name="code_normal" width="16" height="16"/>
         <image name="icon-close-normal" width="14" height="14"/>

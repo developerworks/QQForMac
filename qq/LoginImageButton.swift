@@ -10,14 +10,18 @@ class LoginImageButton: NSButton {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         layer?.cornerRadius = dirtyRect.width / 2
+        imageScaling = .scaleProportionallyDown
         let trackingArea = NSTrackingArea(rect: self.bounds, options: [
             .mouseEnteredAndExited,
             .activeInActiveApp
         ], owner: self, userInfo: nil)
+        
         self.addTrackingArea(trackingArea)
+        
         changeColor(color: defaultColor, with: borderWidth)
     }
 
+    // FIXME: 判断鼠标是否在跟踪区内, 如果在, 就不修改颜色, 如果不在则修改
     override func mouseEntered(with event: NSEvent) {
         changeColor(color: mouseEnteredColor, with: mouseEnteredWidth)
     }

@@ -24,6 +24,9 @@
 		0F97EF6320975B6C0090096B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F97EF6220975B6C0090096B /* OptionsViewController.swift */; };
 		0F97EF652097A1930090096B /* settingViewSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F97EF642097A1920090096B /* settingViewSound.wav */; };
 		0F97EF692097A3530090096B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F97EF682097A3530090096B /* AVFoundation.framework */; };
+		0FEC611B2098723800823DE7 /* LoginUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC61192098723800823DE7 /* LoginUserItem.swift */; };
+		0FEC611C2098723800823DE7 /* LoginUserItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FEC611A2098723800823DE7 /* LoginUserItem.xib */; };
+		0FEC611E2098728E00823DE7 /* LoginUserItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC611D2098728E00823DE7 /* LoginUserItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		0F97EF6220975B6C0090096B /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		0F97EF642097A1920090096B /* settingViewSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = settingViewSound.wav; sourceTree = "<group>"; };
 		0F97EF682097A3530090096B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0FEC61192098723800823DE7 /* LoginUserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserItem.swift; sourceTree = "<group>"; };
+		0FEC611A2098723800823DE7 /* LoginUserItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginUserItem.xib; sourceTree = "<group>"; };
+		0FEC611D2098728E00823DE7 /* LoginUserItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +138,13 @@
 				0F97EF4B209713F60090096B /* LoginAccountTextField.swift */,
 				0F97EF3B2096F1FD0090096B /* LoginImageButton.swift */,
 				0F97EF4D209715C30090096B /* LoginPasswordTextField.swift */,
+				0FEC61192098723800823DE7 /* LoginUserItem.swift */,
+				0FEC611D2098728E00823DE7 /* LoginUserItemModel.swift */,
 				0F97EF392096E2160090096B /* LoginWindowController.swift */,
 				0F97EF6220975B6C0090096B /* OptionsViewController.swift */,
 				0F97EF0F2096E1DD0090096B /* ViewController.swift */,
 				0F97EF112096E1DD0090096B /* Assets.xcassets */,
+				0FEC611A2098723800823DE7 /* LoginUserItem.xib */,
 				0F97EF5B20972DA60090096B /* i18n.strings */,
 				0F97EF132096E1DD0090096B /* Main.storyboard */,
 				0F97EF662097A1A20090096B /* sounds */,
@@ -285,6 +294,7 @@
 				0F97EF122096E1DD0090096B /* Assets.xcassets in Resources */,
 				0F97EF5920972DA60090096B /* i18n.strings in Resources */,
 				0F97EF652097A1930090096B /* settingViewSound.wav in Resources */,
+				0FEC611C2098723800823DE7 /* LoginUserItem.xib in Resources */,
 				0F97EF152096E1DD0090096B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,11 +323,13 @@
 				0F97EF102096E1DD0090096B /* ViewController.swift in Sources */,
 				0F97EF6120973F910090096B /* ImageButton.swift in Sources */,
 				0F97EF3C2096F1FD0090096B /* LoginImageButton.swift in Sources */,
+				0FEC611E2098728E00823DE7 /* LoginUserItemModel.swift in Sources */,
 				0F97EF0E2096E1DD0090096B /* AppDelegate.swift in Sources */,
 				0F97EF3A2096E2160090096B /* LoginWindowController.swift in Sources */,
 				0F97EF5F20973D5B0090096B /* IconArrowButton.swift in Sources */,
 				0F97EF502097259E0090096B /* Constants.swift in Sources */,
 				0F97EF4E209715C30090096B /* LoginPasswordTextField.swift in Sources */,
+				0FEC611B2098723800823DE7 /* LoginUserItem.swift in Sources */,
 				0F97EF4C209713F60090096B /* LoginAccountTextField.swift in Sources */,
 				0F97EF6320975B6C0090096B /* OptionsViewController.swift in Sources */,
 			);
