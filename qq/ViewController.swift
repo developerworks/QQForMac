@@ -9,6 +9,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var iconArrowButton: IconArrowButton!
     @IBOutlet weak var qrViewButton: NSButton!
     @IBOutlet weak var qrCodeRefresher: NSImageView!
+    @IBOutlet weak var collectionView: NSCollectionView!
     
     // 扫码登录
     @IBOutlet var loginQrView: NSView!
@@ -18,6 +19,13 @@ class ViewController: NSViewController {
     let animateDuration: TimeInterval = 0.28
     //    var audioPlayer: AVAudioPlayer!
     var sound: NSSound!
+    var users = [
+        "avatar",
+        "avatar01",
+        "avatar02"
+//        "avatar03",
+//        "avatar04",
+    ]
 
 
     // 子窗口延迟初始化
@@ -58,7 +66,10 @@ class ViewController: NSViewController {
         
         qrCodeRefresher.isHidden = true
         
-        
+        self.collectionView.register(
+            NSNib.init(nibNamed: NSNib.Name.init(rawValue: "LoginUserItem"), bundle: nil),
+            forItemWithIdentifier: NSUserInterfaceItemIdentifier("LoginUserItem")
+        )
     }
 
     override func viewDidAppear() {
@@ -176,9 +187,27 @@ class ViewController: NSViewController {
         // 把二维码识图添加到窗口
         view.addSubview(self.loginQrView)
     }
+    
     @IBAction func backToLogin(_ sender: NSButton) {
         qrViewButton.isHidden = false
         loginQrView.removeFromSuperview()
+    }
+}
+
+// FIXME: 实现 NSCollectionViewDataSource
+extension ViewController: NSCollectionViewDataSource {
+    func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.users.count
+    }
+    func collectionView(
+        _ collectionView: NSCollectionView,
+        itemForRepresentedObjectAt indexPath: IndexPath
+    ) -> NSCollectionViewItem {
+        let item = collectionView.makeItem(
+            withIdentifier: NSUserInterfaceItemIdentifier("LoginUserItem"), for: indexPath
+        ) as! LoginUserItem
+        item.model = LoginUserItemModel(avatarName: self.users[indexPath.item])
+        return item
     }
 }
 

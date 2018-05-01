@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct LoginUserItemModel {
+    var avatarName: String
+    
+    init(avatarName: String) {
+        self.avatarName = avatarName
+    }
+}
