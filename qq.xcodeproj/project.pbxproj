@@ -27,6 +27,7 @@
 		0FEC611B2098723800823DE7 /* LoginUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC61192098723800823DE7 /* LoginUserItem.swift */; };
 		0FEC611C2098723800823DE7 /* LoginUserItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FEC611A2098723800823DE7 /* LoginUserItem.xib */; };
 		0FEC611E2098728E00823DE7 /* LoginUserItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC611D2098728E00823DE7 /* LoginUserItemModel.swift */; };
+		0FEC61202098D7D500823DE7 /* StatusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC611F2098D7D500823DE7 /* StatusButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		0FEC61192098723800823DE7 /* LoginUserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserItem.swift; sourceTree = "<group>"; };
 		0FEC611A2098723800823DE7 /* LoginUserItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginUserItem.xib; sourceTree = "<group>"; };
 		0FEC611D2098728E00823DE7 /* LoginUserItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserItemModel.swift; sourceTree = "<group>"; };
+		0FEC611F2098D7D500823DE7 /* StatusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				0FEC611D2098728E00823DE7 /* LoginUserItemModel.swift */,
 				0F97EF392096E2160090096B /* LoginWindowController.swift */,
 				0F97EF6220975B6C0090096B /* OptionsViewController.swift */,
+				0FEC611F2098D7D500823DE7 /* StatusButton.swift */,
 				0F97EF0F2096E1DD0090096B /* ViewController.swift */,
 				0F97EF112096E1DD0090096B /* Assets.xcassets */,
 				0FEC611A2098723800823DE7 /* LoginUserItem.xib */,
@@ -332,6 +335,7 @@
 				0FEC611B2098723800823DE7 /* LoginUserItem.swift in Sources */,
 				0F97EF4C209713F60090096B /* LoginAccountTextField.swift in Sources */,
 				0F97EF6320975B6C0090096B /* OptionsViewController.swift in Sources */,
+				0FEC61202098D7D500823DE7 /* StatusButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

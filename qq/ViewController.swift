@@ -59,6 +59,12 @@ class ViewController: NSViewController {
     }()
 
     var transitionItemIsAdded: Bool = false
+    
+    var statusBtn: StatusButton = {
+        let button = StatusButton()
+        button.image = #imageLiteral(resourceName: "point-online-normal")
+        return button
+    }()
 
     // MARK: 视图初始化
     //////////////////////////////////////////////////////
